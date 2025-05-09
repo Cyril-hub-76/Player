@@ -1,0 +1,170 @@
+[
+    {
+        "album_name" : "Awake",
+        "slug" : "Awake",
+        "artist" : "Emmetelle",
+        "cover" : "Awake"
+    },
+    {
+        "album_name" : "Back to work",
+        "slug" : "Back_to_work",
+        "artist" : "Michiboux",
+        "cover" : "Back_to_work"
+    },    
+    {
+        "album_name" : "Beautiful Lies",
+        "slug" : "Beautiful_Lies",
+        "artist" : "Saurabh Alwadkar",
+        "cover" : "Beautiful_Lies"
+    },
+    {
+        "album_name" : "CallingOut",
+        "slug" : "CallingOut",
+        "artist" : "AERØHEAD",
+        "cover" : "CallingOut"
+    },
+    {
+        "album_name" : "Cherry Picking",
+        "slug" : "Cherry_Picking",
+        "artist" : "Erothyme",
+        "cover" : "Cherry_Picking"
+    },
+    {
+        "album_name" : "Conjungation",
+        "slug" : "Conjungation",
+        "artist" : "Uncle Milk",
+        "cover" : "Conjungation"
+    },
+    {
+        "album_name" : "Crazy",
+        "slug" : "Crazy",
+        "artist" : "Anoriza",
+        "cover" : "Crazy"
+    },
+    {
+        "album_name" : "Flourish",
+        "slug" : "Flourish",
+        "artist" : "Purple Cats",
+        "cover" : "Flourish"
+    },
+    {
+        "album_name" : "Fragments",
+        "slug" : "Fragments",
+        "artist" : "Nomyn",
+        "cover" : "Fragments"
+    },
+    {
+        "album_name" : "Gaia",
+        "slug" : "Gaia",
+        "artist" : "Nova Noma",
+        "cover" : "Gaia"
+    },
+    {
+        "album_name" : "Hatachi",
+        "slug" : "Hatachi",
+        "artist" : "Kerusu",
+        "cover" : "Hatachi"
+    },
+    {
+        "album_name" : "Kalon",
+        "slug" : "Kalon",
+        "artist" : "Extenz",
+        "cover" : "Kalon"
+    },
+    {
+        "album_name" : "Last Dance",
+        "slug" : "Last_Dance",
+        "artist" : "Zero Project feat Dia Yiannopoulou",
+        "cover" : "Last_Dance"
+    },
+    {
+        "album_name" : "Leaf",
+        "slug" : "Leaf",
+        "artist" : "KV",
+        "cover" : "Leaf"
+    },
+    {
+        "album_name" : "Lockdown",
+        "slug" : "lockdown",
+        "artist" : "Baribal & Pold",
+        "cover" : "lockdown"
+    },
+    {
+        "album_name" : "Marée",
+        "slug" : "Maree",
+        "artist" : "Kai Engel",
+        "cover" : "Maree"
+    },
+    {
+        "album_name" : "Memories",
+        "slug" : "Memories",
+        "artist" : "Atch",
+        "cover" : "Memories"
+    },
+    {
+        "album_name" : "Midnight Stroll",
+        "slug" : "Midnight_Stroll",
+        "artist" : "Ghostrifter",
+        "cover" : "Midnight_Stroll"
+    },
+    {
+        "album_name" : "One For Bill",
+        "slug" : "One_For_Bill",
+        "artist" : "Darin Wilson",
+        "cover" : "One_For_Bill"
+    },
+    {
+        "album_name" : "Relaxing In The Hammock",
+        "slug" : "RelaxingInTheHammock",
+        "artist" : "Glaciaere",
+        "cover" : "RelaxingInTheHammock"
+    },
+    {
+        "album_name" : "Remember",
+        "slug" : "Remember",
+        "artist" : "HaTom",
+        "cover" : "Remember"
+    },
+    {
+        "album_name" : "Stay With Me",
+        "slug" : "Stay_With_Me",
+        "artist" : "Rexlambo",
+        "cover" : "Stay_With_Me"
+    },
+    {
+        "album_name" : "Stranger",
+        "slug" : "Stranger",
+        "artist" : "Aerocity",
+        "cover" : "Stranger"
+    },
+    {
+        "album_name" : "Takayama",
+        "slug" : "Takayama",
+        "artist" : "Niwel",
+        "cover" : "Takayama"
+    },
+    {
+        "album_name" : "Terra",
+        "slug" : "Terra",
+        "artist" : "LEMMiNO",
+        "cover" : "Terra"
+    },
+    {
+        "album_name" : "The Success",
+        "slug" : "The_Success",
+        "artist" : "Keys Of Moon",
+        "cover" : "The_Success"
+    },
+    {
+        "album_name" : "Vacs In The Morning",
+        "slug" : "Vacs_In_The_Morning",
+        "artist": "Martijn Schmit",
+        "cover" : "Vacs_In_The_Morning"
+    },
+    {
+        "album_name" : "Will You Whisper",
+        "slug" : "Will_You_Whisper",
+        "artist" : "Pierce Murphy",
+        "cover" : "Will_You_Whisper"
+    }
+]

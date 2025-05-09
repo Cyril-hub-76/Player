@@ -1,0 +1,119 @@
+/** JS **/
+.playerLight {
+    background: #ebebeb!important;
+}
+/** JS **/
+.active {
+    background-color: var(--selected);
+}
+.activeLight {
+    background-color: #ebebeb;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.dataAlbum {
+    width: 100%;
+    margin-left: 10px;
+}
+.player {
+    box-shadow: 0 -1px 1px rgb(44 43 45 / 10%);
+    background: var(--selected);
+    height: 132px;
+    padding: 0 5px;
+}
+.up {
+    display: flex;
+}
+
+.title {
+    display: block;
+    padding: 12px 0 5px 0;
+    color: var(--purple);
+}
+.timeTrack .track {
+    width: 100%;
+}
+.timeTrack {
+    width: 100%;;
+}
+.timeTrack .time {
+    display: flex;
+    justify-content: space-between;
+}
+.timeTrack .time, .sound .vol {
+    margin-top: 10px;
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    height: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--purple), var(--purpledark));
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--purple);
+    cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--purple);
+    cursor: pointer;
+}
+
+.tracktime, .elapsed, .rangeVol {
+    color: var(--purple);
+}
+.sound {
+    display: none;
+}
+.sound .volume {
+    width: 100%;
+}
+.button {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: var(--purple);
+}
+img.backward, img.play, img.pause, img.forward {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+img.pause {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+
+    .timeTrack {
+        width: 70%;
+    }
+    .sound {
+        display: block;
+        width: 30%;
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 425px){
+    nav .user {
+        width: 30px;
+    }
+    nav .menu {
+        width: 25px;
+    }
+    .timeTrack {
+        padding: unset;
+    }
+}

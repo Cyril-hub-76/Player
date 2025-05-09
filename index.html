@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="player.css">
+    <title>Play it !</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div>
+                    <a href="#"><img class="user" src="icons/user.png" alt="user icon"></a>
+                    <span class="status">Visiteur</span>
+                </div>
+                <img class="menu" src="icons/menu.png" alt="burger menu">
+            </div>
+            <ul class="dropdown">
+                <div class="color">
+                    <li><a href="#">Link One</a></li>
+                    <li><a href="#">Link Two</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="contentList">
+
+        </div>
+    </div>
+    <div class="player">
+        <span class="title"></span>
+        <div class="up">
+            <div class="timeTrack">
+                <input class="track">
+                <div class="time">
+                    <span class="elapsed"></span><span class="tracktime"></span>
+                </div>
+            </div>
+            <div class="sound"> 
+                <input class="volume">
+                <div class="vol">
+                    <span class="rangeVol"></span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="button">
+                <div class="backward">
+                    <img class="backward" src="icons/backward.png" alt="backward button">
+                </div>
+                <div class="play">
+                    <img class="play" src="icons/play.png" alt="play button">
+                    <img class="pause" src="icons/pause.png" alt="pause button">
+                </div>
+                <div class="forward">
+                    <img class="forward" src="icons/forward.png" alt="forward button">
+                </div>
+            </div>
+        </div>
+	<audio class="audioElement"></audio>
+    </div>
+    <script type="module" src="js/player.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
