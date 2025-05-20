@@ -1,14 +1,7 @@
-/** JS **/
-.playerLight {
-    background: #ebebeb!important;
-}
-/** JS **/
 .active {
     background-color: var(--selected);
 }
-.activeLight {
-    background-color: #ebebeb;
-}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -19,7 +12,7 @@
 }
 .player {
     box-shadow: 0 -1px 1px rgb(44 43 45 / 10%);
-    background: var(--selected);
+    background: var(--player-bg);
     height: 132px;
     padding: 0 5px;
 }
@@ -30,7 +23,7 @@
 .title {
     display: block;
     padding: 12px 0 5px 0;
-    color: var(--purple);
+    color: var(--orange);
 }
 .timeTrack .track {
     width: 100%;
@@ -50,7 +43,7 @@ input[type="range"]{
     height: 3px;
     border-radius: 10px;
     cursor: pointer;
-    background: linear-gradient(to right, var(--purple), var(--purpledark));
+    background: var(--input-gradient);
 }
 
 input[type="range"]::-webkit-slider-thumb{
@@ -58,7 +51,7 @@ input[type="range"]::-webkit-slider-thumb{
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background: var(--purple);
+    background: var(--orange);
     cursor: pointer;
 }
 input[type="range"]::-moz-range-thumb {
@@ -67,12 +60,12 @@ input[type="range"]::-moz-range-thumb {
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background: var(--purple);
+    background: var(--orange);
     cursor: pointer;
 }
 
 .tracktime, .elapsed, .rangeVol {
-    color: var(--purple);
+    color: var(--orange);
 }
 .sound {
     display: none;
@@ -85,14 +78,31 @@ input[type="range"]::-moz-range-thumb {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    color: var(--purple);
+    color: var(--orange);
 }
-img.backward, img.play, img.pause, img.forward {
-    width: 40px;
-    height: 40px;
+.day, .night {
+    cursor: pointer;
+    color: var(--orange);
+}
+.night {
+    margin-top: 1px;
+    font-size: 28px;
+}
+.day {
+    margin-top: 3px;
+    font-size: 25px;
+}
+.night {
+    display: none;
+}
+.menu {
+    margin-left: 15px;
+}
+.play .play, .play .pause, .forward .forward, .backward .backward, .menu{
+    font-size: 40px;
     cursor: pointer;
 }
-img.pause {
+.play .pause {
     display: none;
 }
 @media screen and (min-width: 768px) {
@@ -107,9 +117,6 @@ img.pause {
     }
 }
 @media screen and (max-width: 425px){
-    nav .user {
-        width: 30px;
-    }
     nav .menu {
         width: 25px;
     }

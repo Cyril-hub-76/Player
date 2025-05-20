@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9a6c600b3b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="player.css">
     <title>Play it !</title>
@@ -11,11 +12,11 @@
     <header>
         <nav>
             <div class="navbar">
-                <div>
-                    <a href="#"><img class="user" src="icons/user.png" alt="user icon"></a>
+                <div class="userContainer">
+                    <div><i class="fa-solid fa-user user"></i></div>
                     <span class="status">Visiteur</span>
                 </div>
-                <img class="menu" src="icons/menu.png" alt="burger menu">
+                <div class="navIconsContainer"><i class="fa-solid fa-lightbulb day"></i><i class="fa-solid fa-moon night"></i><i class="fa-solid fa-bars menu"></i></div> 
             </div>
             <ul class="dropdown">
                 <div class="color">
@@ -49,20 +50,20 @@
         <div class="box">
             <div class="button">
                 <div class="backward">
-                    <img class="backward" src="icons/backward.png" alt="backward button">
+                    <i class="fa-solid fa-circle-chevron-left backward"></i>
                 </div>
                 <div class="play">
-                    <img class="play" src="icons/play.png" alt="play button">
-                    <img class="pause" src="icons/pause.png" alt="pause button">
+                    <i class="fa-solid fa-circle-play play"></i>
+                    <i class="fa-solid fa-circle-pause pause"></i>
                 </div>
                 <div class="forward">
-                    <img class="forward" src="icons/forward.png" alt="forward button">
+                    <i class="fa-solid fa-circle-chevron-right forward"></i>
                 </div>
             </div>
         </div>
 	<audio class="audioElement"></audio>
     </div>
     <script type="module" src="js/player.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 </body>
 </html>

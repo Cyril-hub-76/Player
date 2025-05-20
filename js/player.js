@@ -13,10 +13,10 @@ fetch("/js/datas/datas.json")
 .catch(e => console.error(`Error : ${e}`));
 
 // buttons
-let playButton = document.querySelector("img.play");
-let pauseButton = document.querySelector("img.pause");
-let forward = document.querySelector("img.forward");
-let backward = document.querySelector("img.backward");
+let playButton = document.querySelector(".play .play");
+let pauseButton = document.querySelector(".play .pause");
+let forward = document.querySelector(".forward .forward");
+let backward = document.querySelector(".backward .backward");
 // time
 let track = document.querySelector(".track");
 track.type = "range";
@@ -39,11 +39,46 @@ let rangeVol = document.querySelector(".rangeVol");
 elapsed.innerHTML= "00 : 00";
 tracktime.innerHTML = "00 : 00";
 rangeVol.innerHTML = (`Vol ${Math.floor(vol.value * 100)} %`);
+// burger
+let menu = document.querySelector('.menu');
+menu.addEventListener("click", function(){
+    menu.classList.toggle('turn');
+});
+// dropdown
+let drop = document.querySelectorAll(".dropdown > div > li > a");
+for (let i of drop) {
+    i.addEventListener("click", function(){
+        document.querySelector('.dropdown').classList.toggle('open');
+        menu.classList.remove('turn');
+    });
+}
+// dark & light handeling
+let darkButton = document.querySelector(".night");
+let lightButton = document.querySelector(".day");
+let body = document.body;
+
+lightButton.addEventListener("click", ()=> {
+    body.classList.add("light-theme")
+    lightButton.style.display = "none";
+    darkButton.style.display = "block";
+    
+})
+darkButton.addEventListener("click", ()=> {
+    body.classList.remove("light-theme");
+    darkButton.style.display = "none";
+    lightButton.style.display = "block";
+    
+})
 
 let container = document.querySelector(".container");
 let containerHeight = container.offsetHeight;
 let contentList = document.querySelector(".contentList");
 let albumArray = [];
+
+let list = document.querySelector('.dropdown');
+menu.addEventListener("click", function(){
+    list.classList.toggle('open');
+});
 
 let displayAlbums = (array) => {
     array.forEach(element => {
@@ -114,16 +149,11 @@ track.addEventListener("change", function(){
 
 forward.addEventListener("click", ()=>{
     let albums = Array.from(contentList.children);
-
     let currentIndex = getCurrentIndex(albums, audio);
-
     let nextIndex = (currentIndex + 1) % albums.length;
-
     let nextTune = albums[nextIndex];
-    
     createAudio(audio, nextTune);
     highlightCurrentAlbum(nextTune, albums)
-    
     let titleContent = nextTune.querySelector(".dataAlbum").textContent;
     title.innerHTML = formatTitle(titleContent);
     titleTune.innerHTML = formatTitle(titleContent);
@@ -134,7 +164,6 @@ forward.addEventListener("click", ()=>{
 
 backward.addEventListener("click", ()=>{
     let albums = Array.from(contentList.children);
-
     let currentIndex = getCurrentIndex(albums, audio);
     let prevIndex = (currentIndex - 1 + albums.length) % albums.length;
     let previousTune = albums[prevIndex];    

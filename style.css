@@ -6,21 +6,54 @@
     font-family: "Noto-light";
     src: url("fonts/NotoSans-Light.ttf");
 }
-*, ::before, ::after {
+*, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto-Regular";
-    font-size: 12px;
+
 }
-:root {
-    --white: #f1f1f1;
-    --purple: #BD74AD;
-    --purplelight: #F2C4E8;
-    --purpledark: #694360;
-    --dark: #3A393A;
-    --selected: #403f40;
-    --selectedBlur : rgba(64, 63, 64, 0.9);
+
+ /*Nord color based : https://www.nordtheme.com/*/
+ :root {
+    /*theme color*/
+    --orange: #d08770;
+    --orangelight: #bf616a;
+    /*background dark & light*/
+    --dark: #2e3440;
+    --light: #eceff4;
+    /*selected album*/
+    --selected : #d086701f;
+    /*gradient*/
+    --toDark: #3b4252;
+    --toLight: #ddbaa9;
+    /*player dark & light*/
+    --colorPlayerDark : #3b4252;
+    --colorPlayerLight : #e5e9f0;
+    /*dropdown blured background*/
+    --selectedBlurDark : rgba(46, 52, 64, 0.9);
+    --selectedBlurLight : rgba(236, 239, 244, 0.9);
+
+    /*Default theme*/
+    --bg : var(--dark);
+    --navBar : var(--dark);
+    --dropdown-bg : var(--selectedBlurDark);
+    --input-gradient : linear-gradient(to right, var(--orange), var(--toDark));
+    --player-bg : var(--colorPlayerDark);
+
+}
+
+body.light-theme {
+    --bg: var(--light);
+    --navBar: var(--light);
+    --dropdown-bg: var(--selectedBlurLight);
+    --input-gradient: linear-gradient(to right, var(--orange), var(--toLight));
+    --player-bg: var(--colorPlayerLight);
+    
+}
+body,
+nav,
+.player{
+    transition: background-color 0.3s;
 }
 /* JS */
 .open {
@@ -29,19 +62,11 @@
 .turn {
     transform: rotate(90deg);
 }
-.light {
-    background: var(--white);
-}
-.textLight {
-    color: var(--purple)!important;
-}
-.dropdownLight{
-    backdrop-filter: blur(10px);
-    background: rgba(241, 241, 241, 0.8)!important;
-}
 /* JS */
 body {
-    background-color: var(--dark);
+    background: var(--bg);
+    font-size: 12px;
+    font-family: "Noto-Regular";
 }
 header {
     position: sticky;
@@ -51,7 +76,7 @@ header {
 nav {
     width: 100%;
     box-shadow: 0 1px 1px rgb(44 43 45 / 20%);
-    background: var(--dark);
+    background: var(--navBar);
 }
 nav .navbar {
     position: relative;
@@ -61,20 +86,25 @@ nav .navbar {
     align-items: center;
     justify-content: space-between;
 }
-nav .navbar div {
+nav .navbar .userContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.navIconsContainer{
+    display: flex;
+}
 nav .user, nav .menu {
-    display: block;
-    width: 30px;
+    color: var(--orange);
+    font-size: 30px;
     cursor: pointer;
-    transition: .5s;
+}
+nav .menu {
+    transition: .3s;
 }
 nav .status {
-    color: var(--purple);
+    color: var(--orange);
     margin-top: 5px;
     text-align: center;
 }
@@ -84,10 +114,11 @@ nav .status {
     width: 100%;
     margin: auto;
     backdrop-filter: blur(50px);
-    background: var(--selectedBlur);
+    background: var(--dropdown-bg);
     list-style: none;
     top: -300px;
-    transition: .5s;
+    transition: top 0.3s ease, background-color 0.3s ease;
+    border-bottom: 3px var(--orange) solid;
 }
 .dropdown li {
     width: 100%;
@@ -98,12 +129,12 @@ nav .status {
     display: block;
     text-decoration: none;
     position: relative;
-    color: var(--purplelight);
+    color: var(--orange);
     width: 100%;
     padding: 15px 0;
 }
 .dropdown li a:hover {
-    color: var(--purple);
+    color: var(--orangelight);
 }
 h1 {
     text-align: center;
@@ -124,10 +155,10 @@ margin: 100px auto;
     display: block;
     width: 60%;
     margin: auto;
-    color: var(--purple);
+    color: var(--orange);
 }
 ::placeholder {
-    color: var(--purple);
+    color: var(--orange);
 }
 #connect .input.rem{
     display: flex;
@@ -142,9 +173,9 @@ margin: 100px auto;
 #register input, #connect input, #connect .rem {
     display: block;
     background: none;
-    color: var(--purple);
+    color: var(--orange);
     outline: none;
-    border: 1px var(--purple) solid;
+    border: 1px var(--orange) solid;
     border-radius: 5px;
     width: 60%;
     height: 40px;
@@ -157,7 +188,7 @@ margin: 100px auto;
     transition: .5s;
 }
 #register .input .submit:hover, #connect .input .submit:hover{
-    background: var(--purple);
+    background: var(--orange);
     color: var(--dark);
 }
 #warning {
@@ -206,7 +237,7 @@ form.warning input:hover {
     padding: 5px;
     align-items: center;
     cursor: pointer;
-    color: var(--purple);
+    color: var(--orange);
 }
 .list .thumb {
     display: block;
@@ -230,48 +261,13 @@ footer {
     * {
         font-size: 11px;
     }
-    .card {
-        width: 100%;
-        height: 60vh;
-    }
-    .card > .hover img {
-        width: 300px;
-    }
-    .hover {
-        width: 300px;
-       height: 300px;
-    }
     #warning {
         width: 100%;
     }
 }
 @media screen  and (max-width: 375px){
-    .container {
-        width: 100%;
-    }
-    .card {
-        width: 95%;
-    }
-    .card > .hover img {
-        width: 320px;
-    }
-    .hover {
-        width: 320px;
-        height: 320px;
-    }
     ul li {
         width: 90%;
     }
 }
-@media screen  and (max-width: 320px){
-    .card {
-        width: 98%;
-    }
-    .card > .hover img {
-        width: 300px;
-    }
-    .hover {
-        width: 300px;
-       height: 300px;
-    }
-}
+
