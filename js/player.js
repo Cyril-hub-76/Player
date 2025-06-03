@@ -52,23 +52,7 @@ for (let i of drop) {
         menu.classList.remove('turn');
     });
 }
-// dark & light handeling
-let darkButton = document.querySelector(".night");
-let lightButton = document.querySelector(".day");
-let body = document.body;
 
-lightButton.addEventListener("click", ()=> {
-    body.classList.add("light-theme")
-    lightButton.style.display = "none";
-    darkButton.style.display = "block";
-    
-})
-darkButton.addEventListener("click", ()=> {
-    body.classList.remove("light-theme");
-    darkButton.style.display = "none";
-    lightButton.style.display = "block";
-    
-})
 
 let container = document.querySelector(".container");
 let containerHeight = container.offsetHeight;
@@ -190,3 +174,32 @@ setInterval(()=>{
     track.value = audio.currentTime;
     elapsed.value = elapsed.innerHTML = formatTime(audio.currentTime);
 }, 500);
+
+// dark & light handeling
+let darkButton = document.querySelector(".night");
+let lightButton = document.querySelector(".day");
+
+let main = document.documentElement;
+lightButton.addEventListener("click", ()=> {
+    setTheme("light");
+    applyStoredStyle();
+});
+darkButton.addEventListener("click", ()=> {
+    setTheme("dark");
+    applyStoredStyle();
+});
+
+const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    main.setAttribute("data-theme", theme);
+}
+
+const applyStoredStyle = () =>{
+    const currentTheme = localStorage.getItem("theme") || "dark";
+
+    setTheme(currentTheme);
+    lightButton.style.display = currentTheme === "light" ? "none" : "block";
+    darkButton.style.display = currentTheme === "dark" ? "none" : "block";
+}
+
+applyStoredStyle();

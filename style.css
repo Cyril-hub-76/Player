@@ -33,23 +33,25 @@
     --selectedBlurDark : rgba(46, 52, 64, 0.9);
     --selectedBlurLight : rgba(236, 239, 244, 0.9);
 
-    /*Default theme*/
+}
+/*Default color theme*/
+:root[data-theme = "dark"]{
     --bg : var(--dark);
     --navBar : var(--dark);
     --dropdown-bg : var(--selectedBlurDark);
     --input-gradient : linear-gradient(to right, var(--orange), var(--toDark));
     --player-bg : var(--colorPlayerDark);
-
 }
 
-body.light-theme {
+:root[data-theme = "light"]{
     --bg: var(--light);
     --navBar: var(--light);
     --dropdown-bg: var(--selectedBlurLight);
     --input-gradient: linear-gradient(to right, var(--orange), var(--toLight));
     --player-bg: var(--colorPlayerLight);
-    
+
 }
+
 body,
 nav,
 .player{
