@@ -73,7 +73,7 @@ let displayAlbums = (array) => {
 
 container.addEventListener("scroll", () => {
 
-    if (container.scrollTop + containerHeight === container.scrollHeight) {
+    if (container.scrollTop + containerHeight >= container.scrollHeight - 70) {
     fill(albumArray, contentList, containerHeight);
     }
 });
